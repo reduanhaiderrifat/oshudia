@@ -2,7 +2,7 @@
 import ExtraButton from '@/components/shared/ExtraButton';
 import React from 'react';
 export const metadata = {
-  title: "About Us | Health Core",
+  title: "About Us | Oshudia",
   description: "Learn more about Earn To Click — a platform dedicated to helping users earn online through task-based rewards and ERC systems.",
   keywords: [
     "about Earn To Click",

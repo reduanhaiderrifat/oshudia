@@ -2,14 +2,15 @@
 import ExtraButton from '@/components/shared/ExtraButton';
 import React from 'react';
 export const metadata = {
-  title: "Terms & Conditions | Health Core",
+  title: "Terms & Conditions | Oshudia",
   description: "Review the Terms & Conditions for using Earn To Click — your trusted platform for online income and ERC rewards.",
   keywords: [
     "Earn To Click terms",
     "terms and conditions",
     "ERC platform rules",
     "online income policy",
-    "reward platform terms"
+    "reward platform terms",
+    "Oshudia",
   ],
   authors: [{ name: "Earn To Click Team", url: `${process.env.NEXT_PUBLIC_DOMAIN}/terms` }],
   creator: "Earn To Click",

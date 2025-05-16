@@ -2,14 +2,15 @@
 import ExtraButton from '@/components/shared/ExtraButton';
 import React from 'react';
 export const metadata = {
-  title: "Privacy Policy | Health Core",
+  title: "Privacy Policy | Oshudia",
   description: "Learn how Earn To Click collects, uses, and protects your personal information. Your privacy and data security are important to us.",
   keywords: [
     "Earn To Click privacy",
     "privacy policy",
     "data protection",
     "user information security",
-    "ERC platform privacy"
+    "ERC platform privacy",
+    "Oshudia"
   ],
   authors: [{ name: "Earn To Click Team", url: `${process.env.NEXT_PUBLIC_DOMAIN}/privacy&policy` }],
   creator: "Earn To Click",

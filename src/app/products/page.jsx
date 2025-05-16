@@ -1,7 +1,7 @@
 import MedicineCards from '@/components/Product/page';
 import React from 'react';
 export const metadata = {
-  title: "Products | Health Core",
+  title: "Products | Oshudia",
   description: "Explore our featured digital products, tools, and services that help boost your online earnings on Earn To Click.",
   keywords: [
     "Earn To Click products",
@@ -9,7 +9,8 @@ export const metadata = {
     "online income tools",
     "reward products",
     "ERC tools",
-    "task-based earning products"
+    "task-based earning products",
+    "Oshudia"
   ],
   authors: [{ name: "Earn To Click Team", url: `${process.env.NEXT_PUBLIC_DOMAIN}` }],
   creator: "Earn To Click",

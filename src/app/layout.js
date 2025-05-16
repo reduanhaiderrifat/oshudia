@@ -16,11 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Health Core",
-  description: "Earn To Click is a platform for online income, task-based rewards, and ERC earnings. Start earning from home today!",
+  title: "Oshudia",
+  description: "Earn To Click is a platform for online income, task-based rewards, and ERC earnings. Start earning from home today! Oshudia",
   keywords: [
     "earn money online",
     "ERC",
+    "Oshudia",
     "Earn To Click",
     "online income",
     "reward platform",

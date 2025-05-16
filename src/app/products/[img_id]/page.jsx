@@ -9,13 +9,13 @@ export const generateMetadata = async ({ params }) => {
 
   const item = medicineData.data.find((item) => item.img_id.split(".")[0] === img_id);
   return {
-    title: `${item?.name} | Health core`,
+    title: `${item?.name} | Oshudia`,
     description: `${item?.name} is a trusted medicine used to treat common conditions such as fever, headache, and body aches. Get detailed information, uses, and benefits.`,
     keywords: item?.active_ingredients,
-    authors: [{ name: "Health core", url: process.env.NEXT_PUBLIC_DOMAIN }],
-    creator: "Health core",
+    authors: [{ name: "Oshudia", url: process.env.NEXT_PUBLIC_DOMAIN }],
+    creator: "Oshudia",
     openGraph: {
-      title: `${item?.name} || Health core`,
+      title: `${item?.name} || Oshudia`,
       description: `${item?.name} is used for treating fever, pain, and inflammation. Learn about dosage, side effects, and uses.`,
       type: "website",
       url: `${process.env.NEXT_PUBLIC_DOMAIN}/products/${img_id}`,
