@@ -57,7 +57,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <a className="btn btn-ghost text-lg text-[#0053a5]">Health Core</a>
+          <a className="btn btn-ghost text-lg text-[#0053a5]">Oshudia</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal space-x-6 px-1">
