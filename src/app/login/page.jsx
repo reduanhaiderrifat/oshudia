@@ -20,7 +20,7 @@ export const metadata = {
     siteName: "Earn To Click",
     images: [
       {
-        url: "/medical-banner.jpg", // Ensure this image exists or replace with an appropriate banner
+        url: "/medical-banner.jpg",
         width: 1200,
         height: 630,
       },
