@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Oshudia",
   description: "Earn To Click is a platform for online income, task-based rewards, and ERC earnings. Start earning from home today! Oshudia",
+   manifest: '/manifest.json',
   keywords: [
     "earn money online",
     "ERC",
@@ -53,6 +54,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+       <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/icons/icon-192x192.png" />
+        <meta name="theme-color" content="#0070f3" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
