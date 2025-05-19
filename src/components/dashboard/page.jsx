@@ -9,6 +9,7 @@ import { db } from '@/lib/firebaseConfig';
 import toast from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
+import { notify } from '../shared/Notification';
 const Dashboard = ({ encoded }) => {
     const { status, data: session } = useSession();
     const [star, setStart] = useState()
@@ -69,7 +70,7 @@ const Dashboard = ({ encoded }) => {
             clearTx.objectStore("stars").clear();
             await clearTx.done;
             await fetchData()
-            toast.success(`Claimed ${claimedStars} stars! Total: ${newEarn}`);
+            notify(`Claimed ${claimedStars} ⭐ successfully! New total: ${newEarn}`)
         } catch (error) {
             toast.error('something wrong try again later')
         } finally {
@@ -168,6 +169,8 @@ const Dashboard = ({ encoded }) => {
                 setUserPoint(0);
             }
             toast.success("Withdrawal request submitted!");
+           notify("Your withdrawal request has been submitted successfully!");
+
         } catch (error) {
 
             toast.error("Failed to submit request. Try again.");

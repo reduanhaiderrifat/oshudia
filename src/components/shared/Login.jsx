@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
 import toast from "react-hot-toast";
+import { notify } from "./Notification";
 
 const Login = () => {
   const router = useRouter();
@@ -27,6 +28,7 @@ const Login = () => {
       });
 
       if (res.ok) {
+         notify("Your Login successfully!");
         router.push("/");
       } else {
         toast.error("Invalid email or password");

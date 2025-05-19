@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { v4 as uuidv4 } from 'uuid';
+import { notify } from "./Notification";
 
 
 
@@ -47,7 +48,7 @@ setLoading(true)
     });
 
     if(docRef.id){
-        toast.success("Create Successfully")
+       notify("Your account create successfully!");
         router.push('/login')
     }
   } catch (e) {
@@ -67,7 +68,7 @@ setLoading(true)
   }, [status, router]);
 
   if (status === "loading") {
-    return <p>Loading...</p>;
+    return <p className="text-center m-6 font-bold">Loading...</p>;
   }
   if (status === "authenticated") {
   return null;

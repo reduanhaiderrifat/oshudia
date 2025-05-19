@@ -39,24 +39,13 @@ const Footer = () => {
               rel="noopener noreferrer" className="text-[#0088cc] hover:scale-110 duration-300">
               <FaTelegram />
             </a>
-            <a href="https://discord.gg/hYFJ2ExV"
-              target="_blank"
-              rel="noopener noreferrer" className="text-[#5865F2] hover:scale-110 duration-300">
-              <FaDiscord />
-            </a>
+       
             <a href="https://vm.tiktok.com/ZSh9nPtMQ/"
               target="_blank"
               rel="noopener noreferrer" className="text-black hover:scale-110 duration-300 dark:text-white">
               <FaTiktok />
             </a>
-            <a
-              href="https://www.instagram.com/earntoclick?igsh=MWg5N252YWk4Mjk0ZQ=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#E4405F] hover:scale-110 duration-300"
-            >
-              <FaInstagram />
-            </a>
+         
           </div>
         </nav>
       </footer>
