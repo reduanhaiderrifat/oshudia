@@ -169,7 +169,8 @@ const ProductDetails = () => {
       <div className="flex justify-center">
         {medicine.img_id && (
           <Image
-            src={`https://i.imgur.com/${medicine.img_id}`}
+            // src={`https://i.imgur.com/${medicine.img_id}`}
+             src={`/images/${medicine?.image}`}
             alt={medicine.name}
             width={280}
             height={280}

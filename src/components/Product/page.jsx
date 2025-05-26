@@ -4,12 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Select from "react-select";
 import medicineData from "../../../data/madecine.json";
+import { FaArrowRight } from "react-icons/fa";
 const MedicineCards = () => {
   const [data, setData] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState("A");
   const [searchValue, setSearchValue] = useState(null);
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -120,6 +122,24 @@ const MedicineCards = () => {
     return value;
   };
 
+
+// handle top up
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setShowScrollButton(true);
+    } else {
+      setShowScrollButton(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
   return (
     <div className="p-2">
       {data.length > 0 && (
@@ -183,7 +203,8 @@ const MedicineCards = () => {
             >
               {item.image && (
                 <Image
-                  src={`https://i.imgur.com/${item.img_id}`}
+                  // src={`https://i.imgur.com/${item.img_id}`}
+                  src={`/images/${item?.image}`}
                   alt={item.name || "Medicine"}
                   width={160}
                   height={160}
@@ -205,15 +226,25 @@ const MedicineCards = () => {
 
                 <Link
                   href={`/products/${item.img_id.split(".")[0]}`}
-                  className="mt-3 inline-block bg-green-100 text-green-800 px-3 py-1 rounded text-sm"
+                  className="mt-3 inline-flex items-center  bg-green-100 text-green-800 px-3 py-1 rounded text-sm"
                 >
-                  More details
+                  More details <FaArrowRight/>
                 </Link>
               </div>
             </div>
           ))
         )}
       </div>
+      {showScrollButton && (
+  <button
+    onClick={scrollToTop}
+    className="fixed bottom-5 right-5 text-2xl bg-[#0053a5] text-white px-3 py-1 rounded-full shadow-lg hover:bg-[#003f80] transition-all z-50"
+    aria-label="Scroll to top"
+  >
+    ↑
+  </button>
+)}
+
     </div>
   );
 };
